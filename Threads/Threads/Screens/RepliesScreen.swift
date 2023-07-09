@@ -1,5 +1,5 @@
 //
-//  NewThread.swift
+//  RepliesScreen.swift
 //  Threads
 //
 //  Created by abdul karim on 08/07/23.
@@ -7,16 +7,15 @@
 
 import SwiftUI
 
-struct NewThread: View {
+struct RepliesScreen: View {
     var body: some View {
         NavigationStack {
-            Text("New Thread")
-                .colorInvert()
+            Text("RepliesScreen")
         }
         .safeAreaPadding(.all)
     }
 }
 
 #Preview {
-    NewThread()
+    RepliesScreen()
 }
