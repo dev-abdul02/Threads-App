@@ -18,6 +18,9 @@
 		9690D02D2A593EF80031D6E7 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9690D02C2A593EF80031D6E7 /* Activity.swift */; };
 		9690D02F2A593F040031D6E7 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9690D02E2A593F040031D6E7 /* Profile.swift */; };
 		9690D0312A593F140031D6E7 /* NewThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9690D0302A593F140031D6E7 /* NewThread.swift */; };
+		969EC8BA2A5979E4007A2E07 /* ThreadsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969EC8B92A5979E4007A2E07 /* ThreadsScreen.swift */; };
+		969EC8BC2A5979F3007A2E07 /* RepliesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969EC8BB2A5979F3007A2E07 /* RepliesScreen.swift */; };
+		96E8A4122A5A7F8E0045873D /* TextThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E8A4112A5A7F8E0045873D /* TextThread.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		9690D02C2A593EF80031D6E7 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		9690D02E2A593F040031D6E7 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		9690D0302A593F140031D6E7 /* NewThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewThread.swift; sourceTree = "<group>"; };
+		969EC8B92A5979E4007A2E07 /* ThreadsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadsScreen.swift; sourceTree = "<group>"; };
+		969EC8BB2A5979F3007A2E07 /* RepliesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepliesScreen.swift; sourceTree = "<group>"; };
+		96E8A4112A5A7F8E0045873D /* TextThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextThread.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +93,7 @@
 		9690D0072A593D9E0031D6E7 /* Threads */ = {
 			isa = PBXGroup;
 			children = (
+				96E8A4102A5A7F750045873D /* ReuseableView */,
 				9690D0272A593EB10031D6E7 /* Screens */,
 				9690D00E2A593D9E0031D6E7 /* ContentView.swift */,
 				9690D00C2A593D9E0031D6E7 /* ThreadsApp.swift */,
@@ -128,8 +135,18 @@
 				9690D02C2A593EF80031D6E7 /* Activity.swift */,
 				9690D02E2A593F040031D6E7 /* Profile.swift */,
 				9690D0302A593F140031D6E7 /* NewThread.swift */,
+				969EC8B92A5979E4007A2E07 /* ThreadsScreen.swift */,
+				969EC8BB2A5979F3007A2E07 /* RepliesScreen.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		96E8A4102A5A7F750045873D /* ReuseableView */ = {
+			isa = PBXGroup;
+			children = (
+				96E8A4112A5A7F8E0045873D /* TextThread.swift */,
+			);
+			path = ReuseableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,11 +253,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9690D02D2A593EF80031D6E7 /* Activity.swift in Sources */,
+				969EC8BA2A5979E4007A2E07 /* ThreadsScreen.swift in Sources */,
 				9690D0312A593F140031D6E7 /* NewThread.swift in Sources */,
 				9690D02F2A593F040031D6E7 /* Profile.swift in Sources */,
 				9690D00F2A593D9E0031D6E7 /* ContentView.swift in Sources */,
 				9690D02B2A593EDE0031D6E7 /* Search.swift in Sources */,
 				9690D0292A593ED10031D6E7 /* Home.swift in Sources */,
+				969EC8BC2A5979F3007A2E07 /* RepliesScreen.swift in Sources */,
+				96E8A4122A5A7F8E0045873D /* TextThread.swift in Sources */,
 				9690D00D2A593D9E0031D6E7 /* ThreadsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,9 +408,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Threads/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -401,6 +422,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Threads;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -413,9 +435,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Threads/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -426,6 +449,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Threads;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
